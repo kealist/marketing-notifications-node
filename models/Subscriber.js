@@ -9,19 +9,19 @@ var SubscriberSchema = new mongoose.Schema({
     phone: String,
     subscribed: {
         type: Boolean,
-        default: false
-    }
+        default: false,
+    },
 });
 
 // Static function to send a message to all current subscribers
 SubscriberSchema.statics.sendMessage = function(message, url, callback) {
     // Find all subscribed users
     Subscriber.find({
-        subscribed: true
+        subscribed: true,
     }, function(err, docs) {
         if (err || docs.length == 0) {
             return callback.call(this, {
-                message: 'Could not find any subscribers!'
+                message: 'Could not find any subscribers!',
             });
         }
 
