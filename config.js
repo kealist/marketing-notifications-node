@@ -1,3 +1,5 @@
+require('dotenv-safe').load();
+
 var cfg = {};
 
 // HTTP Port to run our web application
@@ -27,9 +29,3 @@ cfg.mongoUrl = process.env.MONGOLAB_URI || process.env.MONGO_URL || 'mongodb://l
 
 // Export configuration object
 module.exports = cfg;
-
-
-if (!cfg.accountSid || !cfg.authToken || !cfg.twilioNumber) {
-  throw new Error('TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN' +
-                  ' and TWILIO_NUMBER must be set!.');
-};
