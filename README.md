@@ -18,8 +18,6 @@ Go to your dashboard on [Twilio](https://www.twilio.com/user/account/phone-numbe
 
 On the phone number page, enter `https://<appname.herokuapp.com>/message` into the _Messaging_ Request URL field.
 
-![Request URL](http://howtodocs.s3.amazonaws.com/setup-twilio-number.png)
-
 ## Step 3: Wrap Up!
 
 Now your subscribers will be able to text your new Twilio number to 'Subscribe' to your Marketing Notifications line.
